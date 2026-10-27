@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "runbook-assistant"
+version = "0.1.0"
+description = "A small RAG troubleshooting assistant for Linux and infrastructure logs."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.162.0",
+  "httpx==0.28.1",
+  "pydantic==2.14.1",
+  "uvicorn==0.54.0",
+]
+
+[project.scripts]
+runbook-assistant = "runbook_assistant.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["runbook_assistant*"]
