@@ -1,0 +1,11 @@
+# Synthetic lab transcript. The documented baseline is four active paths.
+09:12:00 lab-hv-01 $ multipath -ll
+mpatha (3600example0001) dm-4 LAB,SHARED-DISK
+size=2.0T features='1 queue_if_no_path' hwhandler='1 alua'
+|- 1:0:0:1 sdb 8:16 active ready running
+|- 2:0:0:1 sdc 8:32 failed faulty running
+|- 3:0:0:1 sdd 8:48 failed faulty running
+|- 4:0:0:1 sde 8:64 failed faulty running
+09:12:04 kernel: Fibre Channel link reset on host2
+09:12:08 iostat sample: device=dm-4 r_await=85.0 w_await=91.0 util=76.0
+09:12:10 note: peer host and array events have not been collected

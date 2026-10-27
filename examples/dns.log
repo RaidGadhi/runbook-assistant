@@ -1,0 +1,10 @@
+# Synthetic lab transcript. All addresses and names are examples.
+08:41:00 lab-app-01 $ systemctl is-active portal
+active
+08:41:03 lab-client-01 $ dig @192.0.2.53 portal.lab.example +time=2 +tries=1
+;; communications error to 192.0.2.53#53: timed out
+;; no servers could be reached
+08:41:07 lab-client-01 $ curl --connect-timeout 3 -I http://192.0.2.20:8080/health
+HTTP/1.1 200 OK
+08:41:10 lab-client-01 $ curl --connect-timeout 3 -I http://portal.lab.example:8080/health
+curl: (6) Could not resolve host: portal.lab.example

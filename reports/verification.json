@@ -1,0 +1,197 @@
+{
+  "executed_at_utc": "2026-10-27T18:09:45.230796+00:00",
+  "python": "3.12.14",
+  "backend_install": "Fresh isolated environment; editable install from pyproject.toml passed.",
+  "tests_run": 42,
+  "tests_passed": 41,
+  "tests_skipped": 1,
+  "tests_failed": 0,
+  "tests": [
+    {
+      "test": "test_assistant.APIBoundaryTests.test_cross_origin_request_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_empty_input",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_examples_are_available",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_health_does_not_expose_key",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_live_without_key_fails_explicitly",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_request_limit",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_retrieval_needs_no_model",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.APIBoundaryTests.test_unknown_fields_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.InputTests.test_bearer_header_is_fully_redacted",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.InputTests.test_empty_sample_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.InputTests.test_large_sample_fails",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.InputTests.test_obvious_instruction_is_quarantined",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.InputTests.test_quoted_secret_is_redacted",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.InputTests.test_redaction_preserves_line_ids",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_auth_error_is_not_retried_or_leaked",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_bad_quote_repaired_once",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_long_retry_after_fails_promptly",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_oversized_context_never_calls_provider",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_refusal",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_request_contract",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_retry_budget_is_shared_with_repair",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_timeout_covers_the_whole_request",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_truncated_response",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ProviderTests.test_two_bad_outputs_fail",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_arbitrary_input_is_supported",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_dns_ranks_first",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_fingerprint_changes_with_guidance",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_only_retrieved_commands_are_offered",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_replication_ranks_first",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_storage_ranks_first",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.RetrievalTests.test_unrelated_query_has_no_hits",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_abstention_needs_a_question",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_citation_to_quarantined_text_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_client_summary_word_budget",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_duplicate_command_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_fabricated_command_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_invented_source_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_quote_from_wrong_log_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_schema_only_can_accept_missing_evidence",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_valid_cited_analysis",
+      "status": "passed"
+    },
+    {
+      "test": "test_assistant.ValidationTests.test_wrapped_runbook_quote_matches_after_whitespace_normalization",
+      "status": "passed"
+    },
+    {
+      "test": "test_live_api.LiveAPI.test_live_dns_smoke",
+      "status": "skipped",
+      "reason": "Live API test requires OPENAI_API_KEY and RUN_LIVE_LLM_TEST=1."
+    }
+  ],
+  "frontend": "Locked npm install, TypeScript check, Vite production build, and FastAPI static-asset smoke checks passed.",
+  "frontend_assets": [
+    {
+      "asset": "index-B-CvfV1s.js",
+      "bytes": 201047,
+      "status": 200
+    },
+    {
+      "asset": "index-BLVLTMcO.css",
+      "bytes": 11708,
+      "status": 200
+    }
+  ],
+  "live_llm": "Not executed. Requires the user's configured API credential and explicit opt-in.",
+  "provider_contract_tests": "Controlled HTTP test doubles; no live provider usage claimed.",
+  "docker": "Recipe included; build not executed because Docker is unavailable in the build environment.",
+  "corpus_fingerprint": "80b34c7cfaef2cd2"
+}

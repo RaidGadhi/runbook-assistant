@@ -1,0 +1,12 @@
+[
+  {"id":"DNS_CONFIG","source_id":"dns/isolate-name-resolution","label":"Inspect active resolver configuration","command":"resolvectl status","expected":"Identify the DNS servers and interface used by the affected client.","read_only":true},
+  {"id":"DNS_QUERY","source_id":"dns/isolate-name-resolution","label":"Query the lab hostname against the configured resolver","command":"dig @192.0.2.53 portal.lab.example +time=2 +tries=1","expected":"Distinguish a timely DNS response, NXDOMAIN, and a resolver timeout.","read_only":true},
+  {"id":"DNS_USER_PATH","source_id":"dns/verify-the-affected-user-path","label":"Check application access through the lab hostname","command":"curl --connect-timeout 3 -I http://portal.lab.example:8080/health","expected":"Test hostname resolution and HTTP response together.","read_only":true},
+  {"id":"STORAGE_PATHS","source_id":"storage/inspect-path-redundancy","label":"Inspect device-mapper paths","command":"multipath -ll","expected":"Compare active paths with the documented four-path baseline.","read_only":true},
+  {"id":"STORAGE_LATENCY","source_id":"storage/correlate-latency-with-the-event-window","label":"Collect several I/O samples","command":"iostat -xz 1 3","expected":"Observe latency and utilization across several samples.","read_only":true},
+  {"id":"STORAGE_KERNEL","source_id":"storage/correlate-latency-with-the-event-window","label":"Review recent kernel events","command":"journalctl -k --since '-15 min' --no-pager","expected":"Correlate link resets and path changes with the incident window.","read_only":true},
+  {"id":"DB_BROKER","source_id":"replication/separate-transport-and-apply-lag","label":"Inspect the Data Guard configuration","command":"dgmgrl / 'show configuration'","expected":"Read current broker status and warnings.","read_only":true},
+  {"id":"DB_LAG","source_id":"replication/separate-transport-and-apply-lag","label":"Read standby lag measurements","command":"SELECT name, value, unit FROM v$dataguard_stats;","expected":"Separate transport and apply lag on the standby.","read_only":true},
+  {"id":"TRIAGE_SERVICES","source_id":"triage/collect-a-current-baseline","label":"Identify failed Linux services","command":"systemctl --failed --no-pager","expected":"Collect a current service-health baseline.","read_only":true},
+  {"id":"TRIAGE_TIME","source_id":"triage/collect-a-current-baseline","label":"Inspect time synchronization","command":"timedatectl status","expected":"Check whether host timestamps can be correlated.","read_only":true}
+]

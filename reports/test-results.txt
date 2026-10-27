@@ -1,0 +1,47 @@
+test_cross_origin_request_rejected (test_assistant.APIBoundaryTests.test_cross_origin_request_rejected) ... ok
+test_empty_input (test_assistant.APIBoundaryTests.test_empty_input) ... ok
+test_examples_are_available (test_assistant.APIBoundaryTests.test_examples_are_available) ... ok
+test_health_does_not_expose_key (test_assistant.APIBoundaryTests.test_health_does_not_expose_key) ... ok
+test_live_without_key_fails_explicitly (test_assistant.APIBoundaryTests.test_live_without_key_fails_explicitly) ... ok
+test_request_limit (test_assistant.APIBoundaryTests.test_request_limit) ... ok
+test_retrieval_needs_no_model (test_assistant.APIBoundaryTests.test_retrieval_needs_no_model) ... ok
+test_unknown_fields_rejected (test_assistant.APIBoundaryTests.test_unknown_fields_rejected) ... ok
+test_bearer_header_is_fully_redacted (test_assistant.InputTests.test_bearer_header_is_fully_redacted) ... ok
+test_empty_sample_fails (test_assistant.InputTests.test_empty_sample_fails) ... ok
+test_large_sample_fails (test_assistant.InputTests.test_large_sample_fails) ... ok
+test_obvious_instruction_is_quarantined (test_assistant.InputTests.test_obvious_instruction_is_quarantined) ... ok
+test_quoted_secret_is_redacted (test_assistant.InputTests.test_quoted_secret_is_redacted) ... ok
+test_redaction_preserves_line_ids (test_assistant.InputTests.test_redaction_preserves_line_ids) ... ok
+test_auth_error_is_not_retried_or_leaked (test_assistant.ProviderTests.test_auth_error_is_not_retried_or_leaked) ... ok
+test_bad_quote_repaired_once (test_assistant.ProviderTests.test_bad_quote_repaired_once) ... ok
+test_long_retry_after_fails_promptly (test_assistant.ProviderTests.test_long_retry_after_fails_promptly) ... ok
+test_oversized_context_never_calls_provider (test_assistant.ProviderTests.test_oversized_context_never_calls_provider) ... ok
+test_refusal (test_assistant.ProviderTests.test_refusal) ... ok
+test_request_contract (test_assistant.ProviderTests.test_request_contract) ... ok
+test_retry_budget_is_shared_with_repair (test_assistant.ProviderTests.test_retry_budget_is_shared_with_repair) ... ok
+test_timeout_covers_the_whole_request (test_assistant.ProviderTests.test_timeout_covers_the_whole_request) ... ok
+test_truncated_response (test_assistant.ProviderTests.test_truncated_response) ... ok
+test_two_bad_outputs_fail (test_assistant.ProviderTests.test_two_bad_outputs_fail) ... ok
+test_arbitrary_input_is_supported (test_assistant.RetrievalTests.test_arbitrary_input_is_supported) ... ok
+test_dns_ranks_first (test_assistant.RetrievalTests.test_dns_ranks_first) ... ok
+test_fingerprint_changes_with_guidance (test_assistant.RetrievalTests.test_fingerprint_changes_with_guidance) ... ok
+test_only_retrieved_commands_are_offered (test_assistant.RetrievalTests.test_only_retrieved_commands_are_offered) ... ok
+test_replication_ranks_first (test_assistant.RetrievalTests.test_replication_ranks_first) ... ok
+test_storage_ranks_first (test_assistant.RetrievalTests.test_storage_ranks_first) ... ok
+test_unrelated_query_has_no_hits (test_assistant.RetrievalTests.test_unrelated_query_has_no_hits) ... ok
+test_abstention_needs_a_question (test_assistant.ValidationTests.test_abstention_needs_a_question) ... ok
+test_citation_to_quarantined_text_rejected (test_assistant.ValidationTests.test_citation_to_quarantined_text_rejected) ... ok
+test_client_summary_word_budget (test_assistant.ValidationTests.test_client_summary_word_budget) ... ok
+test_duplicate_command_rejected (test_assistant.ValidationTests.test_duplicate_command_rejected) ... ok
+test_fabricated_command_rejected (test_assistant.ValidationTests.test_fabricated_command_rejected) ... ok
+test_invented_source_rejected (test_assistant.ValidationTests.test_invented_source_rejected) ... ok
+test_quote_from_wrong_log_rejected (test_assistant.ValidationTests.test_quote_from_wrong_log_rejected) ... ok
+test_schema_only_can_accept_missing_evidence (test_assistant.ValidationTests.test_schema_only_can_accept_missing_evidence) ... ok
+test_valid_cited_analysis (test_assistant.ValidationTests.test_valid_cited_analysis) ... ok
+test_wrapped_runbook_quote_matches_after_whitespace_normalization (test_assistant.ValidationTests.test_wrapped_runbook_quote_matches_after_whitespace_normalization) ... ok
+test_live_dns_smoke (test_live_api.LiveAPI.test_live_dns_smoke) ... skipped 'Live API test requires OPENAI_API_KEY and RUN_LIVE_LLM_TEST=1.'
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.200s
+
+OK (skipped=1)

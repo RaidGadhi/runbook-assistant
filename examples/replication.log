@@ -1,0 +1,8 @@
+# Synthetic observations, not a customer database transcript.
+10:10:00 lab-db-01: role=PRIMARY application available
+10:10:02 lab-db-02: role=PHYSICAL STANDBY
+10:10:03 lab-db-02: transport lag 00:07:00
+10:10:04 lab-db-02: apply lag 00:10:10
+10:10:05 lab-db-02: managed recovery process is not running
+10:10:06 broker warning: ORA-16857 member disconnected from redo source
+10:10:08 note: protection mode and observer state have not been collected
